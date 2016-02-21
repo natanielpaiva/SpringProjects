@@ -2,6 +2,7 @@ package br.com.sisteal.entity;
 
 import br.com.sisteal.domain.TypeVehicle;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
@@ -9,6 +10,7 @@ import javax.persistence.Enumerated;
  *
  * @author Nataniel Paiva
  */
+@Entity
 public class Vehicle extends Item {
 
     @Column(name = "MARK")

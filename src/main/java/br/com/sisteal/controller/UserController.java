@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -23,6 +24,11 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET)
     public List<User> list() {
         return userService.list();
+    }
+    
+    @RequestMapping(params = "/{id}" ,method = RequestMethod.GET)
+    public User get(@RequestParam(value="id") int id){
+        return userService.get(id);
     }
 
     @RequestMapping(method = RequestMethod.POST)

@@ -29,7 +29,7 @@ import javax.persistence.ManyToOne;
     @JsonSubTypes.Type(value = Vehicle.class, name = "vehicle")
 })
 @Entity
-public class Item implements Serializable {
+public class Item {
 
     @Id
     @Column(name = "ID_ITEM")
@@ -37,7 +37,7 @@ public class Item implements Serializable {
     public Integer id;
 
     @JoinColumn(name = "USER_ID")
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
     private User user;
 
     @Column(name = "STATUS")

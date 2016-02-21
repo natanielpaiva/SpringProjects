@@ -19,7 +19,7 @@ public class ItemService {
         return itemRepository.findAll();
     }
     
-    public Item get(Long id){
+    public Item get(int id){
         return itemRepository.findOne(id);
     }
     

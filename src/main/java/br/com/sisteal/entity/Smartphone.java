@@ -1,11 +1,13 @@
 package br.com.sisteal.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 
 /**
  *
  * @author Nataniel Paiva
  */
+@Entity
 public class Smartphone extends Item {
 
     @Column(name = "MARK")
