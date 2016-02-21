@@ -1,0 +1,13 @@
+br/com/sisteal/controller/UserController.class
+br/com/sisteal/service/UserService.class
+br/com/sisteal/domain/StatusEnum.class
+br/com/sisteal/entity/User.class
+br/com/sisteal/domain/TypeVehicle.class
+br/com/sisteal/controller/ItemController.class
+br/com/sisteal/entity/Vehicle.class
+br/com/sisteal/repository/UserRepository.class
+br/com/sisteal/Application.class
+br/com/sisteal/entity/Smartphone.class
+br/com/sisteal/service/ItemService.class
+br/com/sisteal/entity/Item.class
+br/com/sisteal/repository/ItemRepository.class
