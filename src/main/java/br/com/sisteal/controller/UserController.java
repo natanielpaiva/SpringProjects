@@ -25,9 +25,9 @@ public class UserController {
     public List<User> list() {
         return userService.list();
     }
-    
-    @RequestMapping(params = "/{id}" ,method = RequestMethod.GET)
-    public User get(@RequestParam(value="id") int id){
+
+    @RequestMapping(params = "/{id}", method = RequestMethod.GET)
+    public User get(@RequestParam(value = "id") int id) {
         return userService.get(id);
     }
 
@@ -35,10 +35,15 @@ public class UserController {
     public User save(@RequestBody User user) {
         return userService.save(user);
     }
-    
+
     @RequestMapping(method = RequestMethod.PUT)
     public User update(@RequestBody User user) {
         return userService.save(user);
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE)
+    public void delete(@RequestBody User user) {
+        userService.delete(user);
     }
 
 }

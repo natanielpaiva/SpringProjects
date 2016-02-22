@@ -1,11 +1,15 @@
 package br.com.sisteal.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 
 /**
  *
@@ -18,6 +22,11 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID_USER")
     private Integer id;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JsonIgnore
+    @Transient
+    private Item item;
 
     @Column(name = "NAME")
     private String name;
@@ -47,6 +56,14 @@ public class User implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
     }
 
 }

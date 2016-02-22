@@ -3,7 +3,6 @@ package br.com.sisteal.entity;
 import br.com.sisteal.domain.StatusEnum;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import java.io.Serializable;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
